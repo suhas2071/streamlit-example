@@ -5,7 +5,7 @@ import openai
 import streamlit as st
 import openai
 
-openai_api_key='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'
+openai_api_key='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'
 openai.api_key = openai_api_key
 
 # Read the text of the article from a file
@@ -26,7 +26,7 @@ if len(article_text)>100:
     if st.button("Generate Summary",type='primary'):
     # Use GPT-3 to generate a summary of the article
         response = openai.Completion.create(
-            engine="text-davinci-002",
+            engine="gpt-3.5-turbo-instruct",
             prompt="Please summarize this scientific article for me in a few sentences: " +             article_text,
             max_tokens = out_token,
             temperature = 0.5,
