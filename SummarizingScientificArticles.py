@@ -5,7 +5,7 @@ import openai
 import streamlit as st
 import openai
 
-openai_api_key='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'
+openai_api_key=''
 openai.api_key = openai_api_key
 
 # Read the text of the article from a file
